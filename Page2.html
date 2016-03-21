@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>USB</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<p id="demo"></p>
+<h2> Please provide your inputs to following Application/Technology based questions:</h2>
+
+<table>
+    <tr>
+        <td>
+            1.What is the level of Software Infrastructure of your firm?
+        </td>
+        <td>
+            <select id="Level">
+                <option value="1">Beginner</option>
+                <option value="2">Moderate</option>
+                <option value="3">Sophisticated</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            2.Do you own Database Warehouse for your new application?
+        </td>
+        <td>
+            <select id="database">
+                <option value="4">Yes</option>
+                <option value="5">No</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>
+            3. If no to the above question, would you like to consume cloud computing services for Data Storage?
+        </td>
+        <td>
+            <select id="datastorage">
+                <option value="6">Yes</option>
+                <option value="7">No</option>
+            </select>
+        </td>
+    </tr>
+</table>
+
+<div class="button-container">
+    <button onclick="myFunction()"> SUBMIT</button>
+</div>
+
+<script>
+document.getElementById("demo").innerHTML = Date();
+    function myFunction() {
+
+        var x = document.getElementById("Level").selectedIndex;
+        if (x == 0) {
+            sessionStorage.setItem('Key3', 'Develop your company’s software infrastructure before planning any IT strategies.');
+        } else if (x == 1) {
+            sessionStorage.setItem('Key3', 'Hire new Networking Experts and Build your own Wireless Network for building application');
+        }
+        else if (x == 2) {
+            sessionStorage.setItem('Key3', 'Hire experts to provide Online or On Call Technical Customer Support in using application');
+        }
+        var y = document.getElementById("database").selectedIndex;
+        if (y == 0) {
+            sessionStorage.setItem('Key4', 'Concentrate on security and accessibility of Data');
+        } else if (y == 1) {
+            sessionStorage.setItem('Key4', 'Analyze the size of data the company will be handling and processing.');
+        }
+
+        var z = document.getElementById("datastorage").selectedIndex;
+        if (z == 0) {
+            sessionStorage.setItem('Key5', 'Work on the cloud computing advantages and risks');
+        } else if (z == 1) {
+            sessionStorage.setItem('Key5', 'Work on initiating a new Dataware house based on availability of resources.');
+        }
+
+        window.location.href = "Page3.html";
+    }
+
+</script>
+
+
+</body>
+</html>

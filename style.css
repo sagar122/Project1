@@ -1,0 +1,63 @@
+body {
+    background-color: #F4F1F3;
+    font-family: cursive;
+    max-width: 1000px;
+    margin: auto;
+}
+
+h1, h2 {
+    text-align: center;
+    margin-top: 140px;
+}
+
+.page-one-content {
+    text-align: center;
+}
+
+.click-here-link{
+    text-align: center;
+
+}
+
+a {
+    color: #1E90FF;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: underline;
+}
+
+table {
+    width: 700px;
+    margin: auto;
+}
+
+.button-container {
+    text-align: center;
+}
+
+button {
+    margin-top: 39px;
+    width: 200px;
+    height: 50px;
+    border-radius: 6px;
+    color: rgba(255, 255, 255, 2.5);
+    border: none;
+    background: #27AB83;
+    font-size: 18px;
+}
+
+select {
+    font-family: cursive;
+    font-size: 15px;
+    border: none;
+    background-color: #ffffff;
+    width: 200px;
+}
+
+.link-container {
+    text-align: right;
+    position: relative;
+    top: 132px;
+}

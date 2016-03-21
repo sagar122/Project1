@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>USB</title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<p id="demo"></p>
+<h2> Please provide your inputs to following Project Management Startegies: </h2>
+
+<table>
+    <tr>
+        <td>1.What is the expected release of Application into Live :</td>
+        <td>
+            <select id="years">
+                <option value="1">6 months</option>
+                <option value="2">1-2 Years</option>
+                <option value="3">More than 3 Years</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>2.What is the Budget of Project Implementation:</td>
+        <td>
+            <select id="Price">
+                <option value="4">Less than $1 Million</option>
+                <option value="5">$1- $5 Million</option>
+                <option value="6">More Than $5 Million</option>
+            </select>
+        </td>
+    </tr>
+    <tr>
+        <td>3. What is the Size of Project Implementation Team::</td>
+        <td>
+            <select id="people">
+                <option value="7">Less than 25 people</option>
+                <option value="8">25 to 50 People</option>
+                <option value="9">More Than 50 People</option>
+            </select>
+        </td>
+    </tr>
+
+</table>
+
+<div class="button-container">
+    <button onclick="myFunction()"> SUBMIT</button>
+</div>
+
+<script>
+    function myFunction() {
+        var x = document.getElementById("years").selectedIndex;
+        if (x == 0) {
+            sessionStorage.setItem('Key', 'Plan and implement short term goals');
+        } else if (x == 1) {
+            sessionStorage.setItem('Key', 'Break the Long term goals into achievable moderated goals');
+        }
+        else if (x == 2) {
+            sessionStorage.setItem('Key', 'Plan and implement long term goals.');
+        }
+
+        var y = document.getElementById("Price").selectedIndex;
+        if (y == 0) {
+            sessionStorage.setItem('Key1', 'Consume Cloud Computing for Software Architecture');
+        } else if (y == 1) {
+            sessionStorage.setItem('Key1', 'Build your own web services to be reused in entire Application');
+        }
+        else if (y == 2) {
+            sessionStorage.setItem('Key1', 'Create your own Data warehouse to store the valuable data securely');
+        }
+
+        var z = document.getElementById("people").selectedIndex;
+        if (z == 0) {
+            sessionStorage.setItem('Key2', 'Outsourcing and hire technical developers');
+        } else if (z == 1) {
+            sessionStorage.setItem('Key2', 'Divide the team skill wise and analyze the lacking skills to build a project');
+        }
+        else if (z == 2) {
+            sessionStorage.setItem('Key2', 'Assign the teams for to all required technical areas and project management');
+        }
+        window.location.href = "Page2.html";
+    }
+
+document.getElementById("demo").innerHTML = Date();
+
+</script>
+
+</body>
+</html>
